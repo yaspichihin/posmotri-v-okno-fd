@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -37,9 +40,9 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
+  margin-left: 3px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -63,11 +66,9 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
-  grid-template-rows: 534px;
   grid-template-areas: "result details";
   align-items: end;
-  gap: 30px;
-  margin: 130px 30px;
+  gap: 32px;
 }
 
 .result {
@@ -78,20 +79,20 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
-  margin-bottom: 16px;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  margin-top: 16px;
 }
 
 .search-form__fieldset {
@@ -99,11 +100,11 @@ ol {
 }
 
 .search-form__fieldset-title {
+  margin-bottom: 5px;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 100%;
-  letter-spacing: 0%;
 }
 
 .search-form__textfield {
@@ -161,6 +162,7 @@ ol {
 }
 
 .button {
+  min-height: 34px;
   border: 1px solid #ffffff;
   color: #ffffff;
   font-family: inherit;
@@ -189,13 +191,12 @@ ol {
 .search-form__submit-button {
   align-self: flex-end;
   min-width: 194px;
-  min-height: 34px;
 }
 
 .content__details {
   grid-area: details;
-  width: 100%;
-  height: 100%;
+  width: 399px;
+  height: 534px;
 }
 
 .content__details .title {
@@ -212,8 +213,9 @@ ol {
 
 .content__list-container {
   position: relative;
+  width: 100%;
   height: 298px;
-  margin-top: 28px;
+  margin-top: 26px;
   overflow: auto;
 }
 
@@ -227,6 +229,10 @@ ol {
   display: block;
   color: inherit;
   text-decoration: none;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -260,8 +266,6 @@ ol {
   flex-grow: 1;
   grid-area: description;
   gap: 6px;
-  width: 196px;
-  height: 103px;
 }
 
 .content__video-card-title {
@@ -278,7 +282,6 @@ ol {
 .content__video-card-description {
   overflow: hidden;
   font-family: "Fira Sans Condensed", sans-serif;
-  font-size: normal;
   font-size: 18px;
   line-height: 16.2px;
   text-overflow: ellipsis;
@@ -287,8 +290,7 @@ ol {
 
 .content__video-card-thumbnail {
   grid-area: thumbnail;
-
-  width: 100%;
+  width: 194px;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -296,6 +298,5 @@ ol {
 
 .more-button {
   width: 390px;
-  min-height: 34px;
-  margin: 30px 0 2px 0;
+  margin: 30px 3px 2px 0;
 }
